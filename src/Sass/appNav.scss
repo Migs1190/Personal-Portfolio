@@ -1,0 +1,30 @@
+@import "./vars";
+
+#navbar {
+	height: auto;
+	background-color: $secondary;
+	left: 50px;
+
+	#nav-item {
+		padding: 5px;
+		.nav-link {
+			background-color: $primary;
+			width: 40px;
+			height: 40px;
+			color: $quaternary;
+			display: grid;
+			place-content: center;
+			transition: all 0.4s;
+			&:hover,
+			&.active {
+				background-color: $quaternary;
+				color: $primary;
+				box-shadow: 0 0 15px;
+			}
+		}
+		.nav-link-dot {
+			font-size: 10px;
+			color: $quaternary;
+		}
+	}
+}

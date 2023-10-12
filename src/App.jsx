@@ -1,9 +1,14 @@
+import AppNav from "./components/AppNav";
+import AppCanvas from "./components/Three/Canvas";
 import "./styles/App.min.css";
 
 function App() {
 	return (
 		<>
-			<div>Hello, Migs!</div>
+			<div>
+				<AppNav />
+                
+			</div>
 		</>
 	);
 }
