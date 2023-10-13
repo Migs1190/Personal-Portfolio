@@ -1,5 +1,4 @@
 import AppNav from "./components/AppNav";
-import AppCanvas from "./components/Three/Canvas";
 import "./styles/App.min.css";
 
 function App() {
@@ -7,7 +6,6 @@ function App() {
 		<>
 			<div>
 				<AppNav />
-                
 			</div>
 		</>
 	);

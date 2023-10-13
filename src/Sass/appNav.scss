@@ -1,5 +1,8 @@
 @import "./vars";
 
+//Dark Mode
+/* #region [rgba(0, 0, 0, 0.3)] */
+
 #navbar {
 	height: auto;
 	background-color: $secondary;
@@ -14,17 +17,60 @@
 			color: $quaternary;
 			display: grid;
 			place-content: center;
-			transition: all 0.4s;
+			overflow: hidden;
+			position: relative;
+			transition: all 0.5s;
 			&:hover,
 			&.active {
 				background-color: $quaternary;
 				color: $primary;
 				box-shadow: 0 0 15px;
+				opacity: 1;
+			}
+			.nav-link-modes {
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				position: absolute;
+				top: 0%;
+				left: -50%;
+				transform: rotateZ(0deg);
+				transition: transform 0.5s;
 			}
 		}
 		.nav-link-dot {
 			font-size: 10px;
 			color: $quaternary;
+			transition: all 0.5s;
 		}
 	}
 }
+
+/* #endregion */
+
+//Light Mode
+/* #region [rgba(255, 255, 255, 0.01)] */
+body#light #navbar {
+	background-color: $secondary;
+	#nav-item {
+		.nav-link {
+			background-color: $quaternary;
+			color: $primary;
+			&:hover,
+			&.active {
+				background-color: $primary;
+				color: $quaternary;
+			}
+			.nav-link-modes {
+				transform: rotateZ(-180deg);
+			}
+		}
+		.nav-link-dot {
+			color: $primary;
+		}
+	}
+}
+/* #endregion */

@@ -1,6 +1,11 @@
-body {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
+@import "./vars";
 
+body {
+	transition: all 0.5s;
+	&#dark {
+		background-color: #0c0c0c;
+	}
+	&#light {
+		background-color: $quaternary;
+	}
+}
