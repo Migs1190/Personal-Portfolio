@@ -24,4 +24,5 @@ package-lock.json
 *.njsproj
 *.sln
 *.sw?
-src/components/Three
+problems.todo
+src/assets/a-logo-zip-file.zip
