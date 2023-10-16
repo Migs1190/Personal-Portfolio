@@ -1,0 +1,23 @@
+@import "./vars";
+$radius: 20px;
+
+* {
+	cursor: none;
+}
+
+#cursor {
+	width: $radius;
+	height: $radius;
+	background-color: $secondary;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	pointer-events: none;
+	opacity: 0;
+	overflow: hidden;
+	transition: opacity 0.5s;
+	z-index: 101;
+}
+body:hover #cursor {
+	opacity: 1;
+}

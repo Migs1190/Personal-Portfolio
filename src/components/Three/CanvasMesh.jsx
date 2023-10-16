@@ -1,23 +1,32 @@
 /* eslint-disable react/no-unknown-property */
 
 import { useFrame } from "@react-three/fiber";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const CanvasMesh = function (props) {
+	const [color, setColor] = useState("green");
 	const objectRef = useRef();
 
-	useFrame(({ clock }) => {
-		objectRef.current.rotation.x = 2 * Math.cos(clock.getElapsedTime());
-		objectRef.current.rotation.y = Math.sin(clock.getElapsedTime());
-	});
+	const colorPicker = () => {
+		if (document.body.id === "dark") setColor("#gold");
+		else setColor("gold");
+	};
+
+	// useFrame(({ clock }) => {
+	// 	colorPicker();
+	//     // console.log(objectRef.current);
+	// 	objectRef.current.rotation.x = 0.4 * Math.cos(clock.getElapsedTime());
+	// 	objectRef.current.rotation.y = 0.4 * Math.sin(clock.getElapsedTime());
+	// });
+	// TODO Enable this after you're done.
 
 	return (
 		<>
 			{/* <OrbitControls/> */}
-			<mesh ref={objectRef}>
-				<boxGeometry args={[3, 3, 3]} />
-				<meshStandardMaterial color='#9400ff' />
-			</mesh>
+			{/* <mesh ref={objectRef}>
+				<boxGeometry args={[3, 3, 3]}/>
+				<meshStandardMaterial color={color} />
+			</mesh> */}
 		</>
 	);
 };

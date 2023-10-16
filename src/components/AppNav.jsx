@@ -42,11 +42,11 @@ const AppNav = function () {
 			<nav>
 				<Navbar
 					id='navbar'
-					className='flex-column justify-content-between text-center position-fixed  translate-middle  top-50  rounded-pill  d-md-flex  d-none'
+					className='flex-column justify-content-between text-center position-fixed  translate-middle  top-50  rounded-pill  d-md-flex  d-none interactable'
 				>
 					<Nav id='nav-nav'>
 						<Nav.Item id='nav-item' className=''>
-							<Nav.Link className='rounded-circle opacity-100 ' onClick={handleLinkClick}>
+							<Nav.Link className='rounded-circle opacity-100 interactable' onClick={handleLinkClick}>
 								<div className='nav-link-modes'>
 									<i className='fa-solid fa-moon'></i>
 									<i className='fa-solid fa-sun'></i>
@@ -61,7 +61,7 @@ const AppNav = function () {
 										placement='right'
 										overlay={<Tooltip className='position-fixed'>{checkPoint.tooltip}</Tooltip>}
 									>
-										<Nav.Link className='nav-link rounded-circle' href={checkPoint.region}>
+										<Nav.Link className='nav-link rounded-circle interactable' href={checkPoint.region}>
 											<i className={"fa-solid " + checkPoint.icon}></i>
 										</Nav.Link>
 									</OverlayTrigger>
