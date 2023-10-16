@@ -24,10 +24,19 @@ const AppCursor = function () {
 		}
 		cursor.current.animate(
 			{
-				top: `${e.y}px`,
-				left: `${e.x}px`,
+				opacity: `1`,
+				top: `${e.pageY}px`,
+				left: `${e.pageX}px`,
 			},
 			{ duration: 800, fill: `forwards` }
+		);
+	};
+	window.onscroll = () => {
+		cursor.current.animate(
+			{
+				opacity: `0`,
+			},
+			{ duration: 500, fill: `forwards` }
 		);
 	};
 

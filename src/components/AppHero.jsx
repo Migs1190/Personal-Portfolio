@@ -39,7 +39,7 @@ const ecosystems = [
 
 const AppHero = function () {
 	return (
-		<main>
+		<main id='home'>
 			<Container className=' position-relative'>
 				<Row>
 					<div id='hero-body'>

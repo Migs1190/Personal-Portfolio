@@ -1,1 +1,1 @@
-*{cursor:none}#cursor{width:20px;height:20px;background-color:#9400ff;position:absolute;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;opacity:0;overflow:hidden;transition:opacity .5s;z-index:101}body:hover #cursor{opacity:1}
+*{cursor:none}#cursor{width:20px;height:20px;background-color:#9400ff;position:absolute;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;overflow:hidden;transition:opacity .5s;z-index:101}body:hover #cursor{opacity:1}

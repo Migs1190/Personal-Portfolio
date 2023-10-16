@@ -6,6 +6,7 @@ $radius: 20px;
 }
 
 #cursor {
+    background-color: gold;
 	width: $radius;
 	height: $radius;
 	background-color: $secondary;
@@ -13,7 +14,7 @@ $radius: 20px;
 	transform: translate(-50%, -50%);
 	border-radius: 50%;
 	pointer-events: none;
-	opacity: 0;
+	// opacity: 0;
 	overflow: hidden;
 	transition: opacity 0.5s;
 	z-index: 101;

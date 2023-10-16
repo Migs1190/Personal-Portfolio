@@ -28,15 +28,15 @@ const checkPoints = [
 	},
 ];
 
+const mode = localStorage.getItem("preferredMode") ? localStorage.getItem("preferredMode") : "light";
+document.body.id = mode;
+
+const handleLinkClick = () => {
+	document.body.id == "light" ? (document.body.id = "dark") : (document.body.id = "light");
+	localStorage.setItem("preferredMode", document.body.id);
+};
+
 const AppNav = function () {
-	const mode = localStorage.getItem("preferredMode") ? localStorage.getItem("preferredMode") : "light";
-	document.body.id = mode;
-
-	const handleLinkClick = () => {
-		document.body.id == "light" ? (document.body.id = "dark") : (document.body.id = "light");
-		localStorage.setItem("preferredMode", document.body.id);
-	};
-
 	return (
 		<>
 			<nav>
