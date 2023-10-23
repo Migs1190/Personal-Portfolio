@@ -24,11 +24,19 @@ const AppCursor = function () {
 		}
 		cursor.current.animate(
 			{
-				opacity: `1`,
 				top: `${e.pageY}px`,
 				left: `${e.pageX}px`,
+				opacity: `1`,
 			},
 			{ duration: 800, fill: `forwards` }
+		);
+	};
+	window.onmouseout = () => {
+		cursor.current.animate(
+			{
+				opacity: `0`,
+			},
+			{ duration: 500, fill: `forwards` }
 		);
 	};
 	window.onscroll = () => {

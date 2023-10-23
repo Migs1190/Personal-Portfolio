@@ -14,7 +14,7 @@ const pop = (
 			</a>
 		</Popover.Body>
 	</Popover>
-); //TODO FIX - popover is above cursor
+);
 const react = { title: `React`, link: `hhttps://react.dev/`, color: `info` };
 const ecosystems = [
 	{

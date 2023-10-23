@@ -2,7 +2,7 @@
 
 body {
 	height: 1000px;
-    width: 100vw;
+	width: 100vw;
 	transition: all 0.5s;
 	position: relative;
 	&#dark {
@@ -19,8 +19,24 @@ body {
 canvas {
 	width: 100vw;
 	height: 100vh;
-	filter: blur(70px);
+	position: fixed;
 }
 nav {
 	z-index: 100;
+}
+
+//General MediaQuery styles
+//MD
+@media only screen and (min-width: 768px) {
+	#hero-body,
+	#skills-body {
+		padding: 0 70px;
+	}
+}
+//LG
+@media only screen and (min-width: 992px) {
+	#hero-body,
+	#skills-body {
+		padding: 0 80px;
+	}
 }

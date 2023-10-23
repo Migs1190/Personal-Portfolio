@@ -1,15 +1,12 @@
 @import "./vars";
+@import "./functions";
 
 //Dark Mode
 /* #region*/
 
 #hero-body {
-	height: 100vh;
-	width: 100vw;
-	display: grid;
-	place-content: center;
-	position: absolute;
-	z-index: 2;
+    position: absolute;
+	@include mainBody();
 	h1 {
 		color: $secondary;
 		font-size: 35px;
@@ -37,7 +34,7 @@
 	}
 }
 #popover {
-	z-index: 100;
+	z-index: 98;
 	background-color: $quaternary;
 	.popover-arrow::after {
 		border-bottom-color: $quaternary;
@@ -65,7 +62,7 @@ body#light {
 }
 /* #endregion */
 
-//Character
+//Sonic
 @keyframes sonic {
 	0% {
 		background: url("../assets/sonic/run1.png");
@@ -108,18 +105,5 @@ body#light {
 		visibility: hidden;
 		opacity: 0;
 		transition: all 0.5s;
-	}
-}
-
-//MD
-@media only screen and (min-width: 768px) {
-	#hero-body {
-		padding: 0 70px;
-	}
-}
-//LG
-@media only screen and (min-width: 992px) {
-	#hero-body {
-		padding: 0 80px;
 	}
 }

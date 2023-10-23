@@ -1,0 +1,49 @@
+@import "./vars";
+
+@keyframes gridForward {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 0 200%;
+	}
+}
+@keyframes gridBackward {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 0 -200%;
+	}
+}
+#grid-container {
+	perspective: 300px;
+	width: 100vw;
+	height: 70vh;
+	position: fixed;
+	bottom: 0%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	#grid {
+		width: 300vw;
+		height: 200%;
+		background: conic-gradient(from 90deg at 5% 5%, transparent 90deg, $secondary 0) 0 0;
+		background-size: 4% 10%;
+		box-shadow: inset 0 20vh 200vh 20vh $background;
+		position: inherit;
+		top: -20%;
+		transform: rotateX(70deg);
+		animation: gridForward 20s linear infinite forwards;
+		transition: box-shadow 0.5s;
+	}
+}
+body#light {
+	#grid {
+		background: conic-gradient(from 90deg at 5% 5%, transparent 90deg, $secondary 0) 0 0;
+		background-size: 4% 10%;
+		box-shadow: inset 0 20vh 200vh 20vh $quaternary;
+		animation: gridBackward 20s linear infinite forwards;
+	}
+}

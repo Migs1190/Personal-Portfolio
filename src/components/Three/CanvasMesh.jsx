@@ -1,10 +1,10 @@
 /* eslint-disable react/no-unknown-property */
 
 import { useFrame } from "@react-three/fiber";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 const CanvasMesh = function (props) {
-	const [color, setColor] = useState("green");
+	const [color, setColor] = useState("gold");
 	const objectRef = useRef();
 
 	const colorPicker = () => {
@@ -22,11 +22,10 @@ const CanvasMesh = function (props) {
 
 	return (
 		<>
-			{/* <OrbitControls/> */}
-			{/* <mesh ref={objectRef}>
-				<boxGeometry args={[3, 3, 3]}/>
+			<mesh ref={objectRef} rotation={[-1.5, 0, 0]}>
+				<planeGeometry args={[20, 10]} />
 				<meshStandardMaterial color={color} />
-			</mesh> */}
+			</mesh>
 		</>
 	);
 };

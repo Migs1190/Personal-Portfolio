@@ -16,12 +16,6 @@ const checkPoints = [
 	},
 	{
 		id: 3,
-		region: "#skills",
-		icon: "fa-screwdriver-wrench",
-		tooltip: "Skills & Tools",
-	},
-	{
-		id: 4,
 		region: "#contact",
 		icon: "fa-address-book",
 		tooltip: "Contact Info",
